@@ -1,0 +1,67 @@
+/* Tabs */
+.season_tabs {
+	position: relative;   
+	min-height: 340px; /* This part sucks */
+	clear: both;
+	margin: 25px 0;
+  }
+  .season_tab {
+	float: left;  
+	clear: both;
+	width: 286px;
+	@include responsive(tablet-kucuk) {
+		width: 100%;
+	}
+  }
+  .season_tab label {
+	  background: #fbfbfb;
+	  padding: 10px;
+	  border: 1px solid #e9e9e9;
+	  margin-left: -1px;
+	  font-size: 18px;
+	  font-weight: 600;
+	  vertical-align: middle;
+	  position: relative;
+	  left: 1px;
+	  width: 264px;
+	  height: 68px;
+	  display: table-cell;
+	  cursor: pointer;
+	  border-radius: 5px;
+     box-shadow: 0 0 12px rgba(0, 0, 0, 0.103) !important;
+  }
+  .season_tab [type=radio] {
+	display: none;   
+  }
+  p.listtext {
+    font-size: 16px;
+}
+  .season_content {
+	position: absolute;
+	top: 0;
+	left: 286px;
+	background: white;
+	right: 0;
+	bottom: 0;
+	padding: 2px;
+	padding-left: 20px;
+	padding-right: 106px;
+	border: 1px solid #eeeeee;
+	border-radius: 5px;
+	@include responsive(tablet-kucuk) {
+		position: relative;
+		left: 0px;
+	}
+   }
+  .season_content span {
+	animation: 0.5s ease-out 0s 1 slideInFromTop; 
+  }
+  [type=radio]:checked ~ label {
+	background: #181818;
+    color: #fff;
+	z-index: 2;
+  }
+  [type=radio]:checked ~ label ~ .season_content {
+	z-index: 1;
+  }
+  /* Tabs Finish */
